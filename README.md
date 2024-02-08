@@ -1,11 +1,10 @@
-# Homelab-Configuration-Documentation
-Configuration and Documentation of my Homelab setup
-
 # HomeLab Server Documentation
+See wiki [HomeLab Server Wiki](https://github.com/zerneo85/Homelab-Configuration-Documentation/wiki)
+
 
 ## Overview
 
-Welcome to the documentation for [Your Name]'s HomeLab Server! This comprehensive guide provides insights into the setup, configuration, and management of the server infrastructure powering your home lab. Whether you're a fellow tech enthusiast or simply curious about the inner workings of a personal server, you've come to the right place.
+Welcome to the documentation for my HomeLab Server! This comprehensive guide provides insights into the setup, configuration, and management of the server infrastructure powering your home lab. Whether you're a fellow tech enthusiast or simply curious about the inner workings of a personal server, you've come to the right place.
 
 ## Server Specifications
 
