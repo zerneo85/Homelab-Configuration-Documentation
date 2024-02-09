@@ -7,5 +7,3 @@ Welcome to the documentation for my HomeLab Server! This comprehensive guide pro
 See wiki [HomeLab Server Wiki](https://github.com/zerneo85/Homelab-Configuration-Documentation/wiki)
 
 Feel free to contribute to this documentation and share your insights! Together, we can make the HomeLab Server a hub of innovation and exploration. Happy homelabbing! 🚀
-
-jh
