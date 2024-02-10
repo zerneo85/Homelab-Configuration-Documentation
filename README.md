@@ -6,6 +6,6 @@ Feel free to contribute to this documentation and share your insights! Together,
 
 I have documented everything here in the wiki [HomeLab Server Wiki](https://github.com/zerneo85/Homelab-Configuration-Documentation/wiki)
 
-![HL-AI1.jpg](https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/images/HL-AI1.jpg.png)
+![HL-AI1.jpg](https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/images/HL-AI1.jpg)
 
-![HL-AI2.jpg](https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/images/HL-AI2.jpg.png)
+![HL-AI2.jpg](https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/images/HL-AI2.jpg)
