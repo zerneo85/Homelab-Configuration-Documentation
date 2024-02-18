@@ -1,5 +1,5 @@
 # Collection of suspicious IP addresses
-# https://github.com/zerneo85/Homelab-Configuration-Documentation/tree/main/config/suspicious.txt
+# https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/config/suspicious.txt
 # Last update: Sun, 18 Feb 2024 23:46
 
 161.51.64.114
