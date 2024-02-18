@@ -1,8 +1,8 @@
 # Collection of suspicious IP addresses
 # https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/config/suspicious.txt
 # Last update: Sun, 18 Feb 2024 23:46
-3.104.162.153/32
-3.110.187.220/32
+3.104.162.153/32 ;
+3.110.187.220/32 ;
 3.124.255.254/32
 5.107.206.224/32
 5.134.124.102/32
