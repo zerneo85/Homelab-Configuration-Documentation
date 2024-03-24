@@ -3,7 +3,7 @@
 # netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -n20
 # Monitor kern log file
 # tail -f /var/log/kern.log | grep "LOG"
-# Update 240324: Initial list
+# Update 240324: Initial updated list
 13.69.231.197
 20.103.84.41
 20.101.174.49
