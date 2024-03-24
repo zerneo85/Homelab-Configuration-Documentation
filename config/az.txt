@@ -1,0 +1,19 @@
+# Collection of AZ IP addresses
+# Top 20 list of IPs with a large amount of connections to the server
+# netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -n20
+# Monitor kern log file
+# tail -f /var/log/kern.log | grep "LOG"
+# Update 240324: Initial list
+13.69.231.197
+20.103.84.41
+20.101.174.49
+20.103.17.223
+40.113.140.122
+82.165.102.189
+89.146.39.129
+95.99.198.99
+95.99.196.223
+146.190.48.172
+195.240.123.51
+178.228.164.17
+217.100.62.242
