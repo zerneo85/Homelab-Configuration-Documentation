@@ -8,6 +8,7 @@ I have documented everything here in the wiki [HomeLab Server Wiki](https://gith
 
 AI Generated video about homelab
 <video controls src="https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/images/BuildYourSmartHomeServerToday!.mp4" title="AI Generated video about homelab"></video>
+![alt text](images/BuildYourSmartHomeServerToday!.gif)
 
 ![HL-AI1.jpg](https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/images/HL-AI1.jpg)
 
