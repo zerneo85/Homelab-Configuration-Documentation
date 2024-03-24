@@ -5,7 +5,6 @@
 # Monitor kern log file
 # tail -f /var/log/kern.log | grep "LOG"
 # Update 240316: Cleaned up list and removed dublicates
-# Update 240218: Initial list
 # Update 240324: Updated and cleaned up list
 77.160.112.65
 80.60.114.94
