@@ -5,6 +5,5 @@
 # tail -f /var/log/kern.log | grep "LOG"
 # Update 240324: Initial list
 95.99.196.223
-195.240.123.51
+195.240.123.51 #ZV Home
 89.146.39.129
-88.124.85.19
