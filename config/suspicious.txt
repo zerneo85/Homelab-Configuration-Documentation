@@ -1,11 +1,3 @@
-# Collection of suspicious IP addresses
-# https://github.com/zerneo85/Homelab-Configuration-Documentation/blob/main/config/suspicious.txt
-# Top 20 list of IPs with a large amount of connections to the server
-# netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -n20
-# Monitor kern log file
-# tail -f /var/log/kern.log | grep "LOG"
-# Update 240316: Cleaned up list and removed dublicates
-# Update 240324: Updated and cleaned up list
 77.160.112.65
 80.60.114.94
 188.207.79.201
