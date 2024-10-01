@@ -45,7 +45,7 @@ else
 fi
 
 # API endpoint
-API_URL="https://automate.domain.com/webhook/pve-temp"
+API_URL="https://automate.zelissen.nl/webhook/pve-temp"
 
 # Function to log output to file
 log_to_file() {
@@ -153,38 +153,62 @@ manage_fan_speed() {
     FAN_MODE="Manual"
     if [[ $TEMP -lt 40 ]]; then
         set_fan_speed_manual 4
-    elif [[ $TEMP -ge 40 && $TEMP -lt 45 ]]; then
+    elif [[ $TEMP -ge 40 && $TEMP -lt 50 ]]; then
         set_fan_speed_manual 8
-    elif [[ $TEMP -ge 45 && $TEMP -lt 50 ]]; then
+    elif [[ $TEMP -ge 50 && $TEMP -lt 60 ]]; then
         set_fan_speed_manual 16
-    elif [[ $TEMP -ge 50 && $TEMP -lt 55 ]]; then
-        set_fan_speed_manual 32
-    elif [[ $TEMP -ge 55 && $TEMP -lt 60 ]]; then
-        set_fan_speed_manual 40
     elif [[ $TEMP -ge 60 && $TEMP -lt 70 ]]; then
+        set_fan_speed_manual 32
+    elif [[ $TEMP -ge 70 && $TEMP -lt 75 ]]; then
+        set_fan_speed_manual 40
+    elif [[ $TEMP -ge 75 && $TEMP -lt 80 ]]; then
         set_fan_speed_manual 64
     else
         set_fan_speed_manual 96
     fi
 }
 
-# Function to monitor RPM, temperature, and power for 3 minutes, writing every 30 seconds
+# Function to monitor RPM, temperature, and power, cycling through fan speeds
 monitor_rpm_temp_power() {
     MODE="Monitoring"
-    log_to_file "Monitoring for 3 minutes"
-    for ((i=0; i<6; i++)); do
-        TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-        read -r MIN_RPM MIN_FAN MAX_RPM MAX_FAN <<< $(get_rpm_info)
-        read -r INLET_TEMP CPU_TEMP <<< $(get_temp)
-        INSTANT_POWER=$(get_power_usage)
+    FAN_MODE="Manual"
+    log_to_file "Starting monitoring, cycling through fan speeds"
 
-        LOG_MESSAGE="$TIMESTAMP | LO RPM: $MIN_RPM ($MIN_FAN) | HIGH RPM: $MAX_RPM ($MAX_FAN) | PWM $FAN_SPEED | INLET TEMP: $INLET_TEMP°C | CPU TEMP: $CPU_TEMP°C | POWER: Instant: $INSTANT_POWER W | $MODE | $FAN_MODE Mode"
-        echo "$LOG_MESSAGE"
-        log_to_file "$LOG_MESSAGE"
+    # Define the 7 fan speeds as PWM values
+    FAN_SPEEDS=(4 8 16 32 40 64 96)
 
-        sleep 30
+    # Loop through each fan speed
+    for FAN_PWM in "${FAN_SPEEDS[@]}"; do
+        # Set the fan speed
+        set_fan_speed_manual $FAN_PWM
+
+        log_to_file "Set fan speed to $FAN_PWM% PWM, starting 2-minute monitoring interval"
+
+        # For 2 minutes, log data every 15 seconds (8 intervals)
+        for ((j=0; j<8; j++)); do
+            TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+
+            # Gather RPM, temperature, and power data
+            read -r MIN_RPM MIN_FAN MAX_RPM MAX_FAN <<< $(get_rpm_info)
+            read -r INLET_TEMP CPU_TEMP <<< $(get_temp)
+            INSTANT_POWER=$(get_power_usage)
+
+            # Log the data
+            FAN_SPEED="${FAN_PWM}%"
+            LOG_MESSAGE="$TIMESTAMP | LO RPM: $MIN_RPM ($MIN_FAN) | HIGH RPM: $MAX_RPM ($MAX_FAN) | PWM $FAN_SPEED | INLET TEMP: $INLET_TEMP°C | CPU TEMP: $CPU_TEMP°C | POWER: Instant: $INSTANT_POWER W | $MODE | $FAN_MODE Mode"
+            echo "$LOG_MESSAGE"
+            log_to_file "$LOG_MESSAGE"
+
+            sleep 15
+        done
     done
+
+    # Optionally, reset fan speed to automatic or a default value after monitoring
+    reset_fan_to_auto
+    log_to_file "Monitoring complete. Fans reset to automatic mode."
 }
+
+
 
 # Ask user if they want to monitor the log file
 monitor_log_file() {
@@ -253,7 +277,7 @@ if [[ -t 1 ]]; then
 
         monitor_rpm_temp_power
         update_config  # Save config changes
-        monitor_log_file  # Ask user if they want to monitor the log
+      #  monitor_log_file  # Ask user if they want to monitor the log
 
         # Re-enable the cron job if it was disabled
         if [[ "$CRON_WAS_DISABLED" == "yes" ]]; then
