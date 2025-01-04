@@ -3792,7 +3792,6 @@
 212.187.60.177 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
 185.22.195.254 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
 163.158.11.171 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
-161.35.92.157 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
 145.53.247.78 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
 145.131.99.173 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
 145.131.119.5 # IP geblokkeerd UNK December 4, 2024 11:06 pm Heeft een ongeldige gebruikersnaam gebruikt 'dave.erken@unik.nl' om in te loggen Permanent 1 December 4, 2024 11:06 pm
